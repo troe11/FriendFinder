@@ -9,6 +9,7 @@ var PORT = process.env.port || 8080;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.use(express.static("app/public"));
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
